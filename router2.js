@@ -31,7 +31,7 @@ const app = express();
 app.use(cors({ origin: '*' }));
 app.use(express.json());
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Configure multer for file uploads
 const upload = multer({ dest: 'uploads/' });
